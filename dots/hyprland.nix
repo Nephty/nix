@@ -17,10 +17,9 @@
       monitor="eDP-1, 1920x1080, 0x0, 1";
 
       exec-once = [
-        "swaybg -i ~/Nix/background.jpg"
+        "swaybg -i ~/nix/background.jpg"
         "dunst"
         "waybar"
-        "swayidle -w timeout 180 'bin/lock_with_grace.sh' before-sleep 'swaylock -f'"
         "xset -b"
       ];
 
