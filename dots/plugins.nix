@@ -13,7 +13,7 @@
         hyprexpo = {
           columns = 3;
           gap_size = 5;
-          bg_col = "rgba(44475ADD)";
+          bg_col = "rgb(#${config.colorScheme.palette.base00})";
           workspace_method = "first 1";
         };
       };

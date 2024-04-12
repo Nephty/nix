@@ -39,14 +39,14 @@
         dots_spacing = 0.2;
         dots_center = true;
 
-        outer_color = "rgb(34, 36, 45)";
-        inner_color = "rgb(34, 36, 45)";
-        font_color = "rgb(218, 219, 234)";
+        outer_color = "rgb(#${config.colorScheme.palette.base00})";
+        inner_color = "rgb(#${config.colorScheme.palette.base00})";
+        font_color = "rgb(#${config.colorScheme.palette.base06})";
 
         placeholder_text = "";
 
-        check_color = "rgb(#FCD04C)";
-        fail_color = "rgb(#EB0740)";
+        check_color = "rgb(#${config.colorScheme.palette.base09})";
+        fail_color = "rgb(#${config.colorScheme.palette.base07})";
       }
     ];
 
@@ -59,7 +59,7 @@
         '';
         font_family = "JetBrainsMono Nerd Font";
         font_size = 120;
-        color = "rgb(218, 219, 234)";
+        color = "rgb(#${config.colorScheme.palette.base06})";
 
         position = {
           x = 50;

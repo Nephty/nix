@@ -1,4 +1,4 @@
-{
+{ config, inputs, ... }: {
   programs.waybar = {
     enable = true;
 
@@ -59,8 +59,8 @@
         };
 
         "battery" = {
-          format-charging = "{capacity}% "; # icon : 
-          format = "{capacity}% "; # icon : 
+          format-charging = "{capacity}%"; # icon : 
+          format = "{capacity}%"; # icon : 
         };
 
         "clock" = {
@@ -98,7 +98,8 @@
         };
 
 	    "custom/ping" = {
-          format = "{}";
+          format = "{}";l = 1;
+        };
           return-type = "string";
           exec = "/home/nephty/bin/pong.sh";
           interval = 2;
@@ -124,7 +125,7 @@
       window#waybar {
           background-color: rgba(43, 48, 59, 0.0);
           /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-          color: #ffffff;
+          color: #${config.colorScheme.palette.base06};
           transition-property: background-color;
           transition-duration: .5s;
       }
@@ -162,26 +163,31 @@
       /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
       button:hover {
           background: inherit;
-          box-shadow: inset 0 -3px #ffffff;
+          box-shadow: inset 0 -3px #${config.colorScheme.palette.base06};
       }
 
       #workspaces button {
           padding: 0 5px;
           background-color: transparent;
-          color: #ffffff;
+          color: #${config.colorScheme.palette.base06};
       }
 
       #workspaces button:hover {
           background: rgba(0, 0, 0, 0.2);
       }
 
-      #workspaces button.focused {
-          background-color: #64727D;
-          box-shadow: inset 0 -3px #000000;
+/*
+      #workspaces button.active {
+          box-shadow: inset 1px 0 1px #${config.colorScheme.palette.base06}, inset -1px 0 1px #${config.colorScheme.palette.base00};
+      }
+*/
+
+      #workspaces button.active {
+          background: linear-gradient(to right, #${config.colorScheme.palette.base03} 0%, #${config.colorScheme.palette.base00} 30%);
       }
 
       #workspaces button.urgent {
-          background-color: #eb4d4b;
+          background-color: #${config.colorScheme.palette.base06};
       }
 
       #mode {
@@ -190,8 +196,8 @@
       }
 
       #clock {
-          background-color: rgba(45, 37, 45, 0.5);
-          color: #ffffff;
+          background-color: #${config.colorScheme.palette.base00};
+          color: #${config.colorScheme.palette.base06};
           border-top-style: double;
           border-bottom-style: double;
           border-width: 3px;
@@ -216,7 +222,8 @@
 
       #window,
       #workspaces {
-          background: rgba(45, 37, 45, 0.5);
+          background-color: #${config.colorScheme.palette.base00};
+          color: #${config.colorScheme.palette.base06};
           margin: 0 4px;
           border-top-style: double;
           border-bottom-style: double;
@@ -234,48 +241,54 @@
       }
 
       #custom-spacerleft {
-          background-color: rgba(45, 37, 45, 0.5);
+          background-color: #${config.colorScheme.palette.base00};
           border-radius: 10px 0px 0px 10px;
           border-top-style: double;
           border-left-style: double;
           border-bottom-style: double;
           border-width: 3px;
-          color:#ffffff;
+          border-color: #${config.colorScheme.palette.base06};
       }
 
       #custom-spacercenter {
-          background-color: rgba(45, 37, 45, 0.5);
+          background-color: #${config.colorScheme.palette.base00};
           border-top-style: double;
           border-bottom-style: double;
           border-width: 3px;
+          border-color: #${config.colorScheme.palette.base06};
       }
 
       #custom-spacerright {
-          background-color: rgba(45, 37, 45, 0.5);
+          background-color: #${config.colorScheme.palette.base00};
           border-radius: 0px 10px 10px 0px;
           border-top-style: double;
           border-right-style: double;
           border-bottom-style: double;
           border-width: 3px;
+          border-color: #${config.colorScheme.palette.base06};
       }
 
       #custom-ping {
-          background-color: rgba(45, 37, 45, 0.5);
+          background-color: #${config.colorScheme.palette.base00};
+          color: #${config.colorScheme.palette.base06};
           border-top-style: double;
           border-bottom-style: double;
           border-width: 3px;
+          border-color: #${config.colorScheme.palette.base06};
       }
 
       #custom-cpu {
-          background-color: rgba(45, 37, 45, 0.5);
+          background-color: #${config.colorScheme.palette.base00};
+          color: #${config.colorScheme.palette.base06};
           border-top-style: double;
           border-bottom-style: double;
           border-width: 3px;
+          border-color: #${config.colorScheme.palette.base06};
       }
 
       #battery {
-          background-color: rgba(45, 37, 45, 0.5);
-          color: #ffffff;
+          background-color: #${config.colorScheme.palette.base00};
+          color: #${config.colorScheme.palette.base06};
           border-top-style: double;
           border-bottom-style: double;
           border-width: 3px;
@@ -283,7 +296,8 @@
 
       #battery.charging, #battery.plugged {
           color: #ffffff;
-          background-color: rgba(45, 37, 45, 0.5);
+          background-color: #${config.colorScheme.palette.base00};
+          color: #${config.colorScheme.palette.base06};
           border-top-style: double;
           border-bottom-style: double;
           border-width: 3px;
@@ -291,14 +305,14 @@
 
       @keyframes blink {
           to {
-              background-color: #ffffff;
-              color: #000000;
+              background-color: #${config.colorScheme.palette.base06};
+              color: #${config.colorScheme.palette.base00};
           }
       }
 
       #battery.critical:not(.charging) {
-          background-color: rgba(45, 37, 45, 0.5);
-          color: #ffffff;
+          background-color: #${config.colorScheme.palette.base00};
+          color: #${config.colorScheme.palette.base06};
           animation-name: blink;
           animation-duration: 0.5s;
           animation-timing-function: linear;
@@ -310,20 +324,20 @@
       }
 
       label:focus {
-          background-color: #000000;
+          background-color: #${config.colorScheme.palette.base00};
       }
 
       #cpu {
-          background-color: rgba(45, 37, 45, 0.5);
-          color: #ffffff;
+          background-color: #${config.colorScheme.palette.base00};
+          color: #${config.colorScheme.palette.base06};
           border-top-style: double;
           border-bottom-style: double;
           border-width: 3px;
       }
 
       #memory {
-          background-color: rgba(45, 37, 45, 0.5);
-          color: #ffffff;
+          background-color: #${config.colorScheme.palette.base00};
+          color: #${config.colorScheme.palette.base06};
           border-top-style: double;
           border-bottom-style: double;
           border-width: 3px;
@@ -346,16 +360,16 @@
       }
 
       #pulseaudio {
-          background-color: rgba(45, 37, 45, 0.5);
-          color: #ffffff;
+          background-color: #${config.colorScheme.palette.base00};
+          color: #${config.colorScheme.palette.base06};
           border-top-style: double;
           border-bottom-style: double;
           border-width: 3px;
       }
 
       #pulseaudio.muted {
-          background-color: rgba(45, 37, 45, 0.5);
-          color: #ffffff;
+          background-color: #${config.colorScheme.palette.base00};
+          color: #${config.colorScheme.palette.base06};
           border-top-style: double;
           border-bottom-style: double;
           border-width: 3px;

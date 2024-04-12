@@ -1,0 +1,11 @@
+ashes.png               Black/white, very pale
+ayu-mirage.png          Blue/sand, vivid
+brushtrees-dark.png     Blue/light blue, very pale
+classic-dark.png        Black/white, classic
+decaf.png               Black/gray, somewhat pale
+material.png black      Blueish black/white, classic
+onedark.png black       Black/gray, classic
+
+stella.png              purple
+atelier-estuary.png     woods
+harmonic16-dark.png     blue/gray, brown/green/purple

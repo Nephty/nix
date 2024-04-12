@@ -17,15 +17,9 @@
       monitor="eDP-1, 1920x1080, 0x0, 1";
 
       exec-once = [
-        "swaybg -i ~/nix/background.jpg"
         "dunst"
         "waybar"
         "xset -b"
-      ];
-
-      env = [
-        "XCURSOR_SIZE,24"
-        "WLR_NO_HARDWARE_CURSORS,1"
       ];
 
       input = {
@@ -46,7 +40,7 @@
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
-        "col.active_border" = "rgba(FFFFFFFF) rgba(453745FF) 45deg";
+        "col.active_border" = "rgb(#${config.colorScheme.palette.base06}) rgb(#${config.colorScheme.palette.base00}) 45deg";
         "col.inactive_border" = "rgba(00000000)";
 
         layout = "dwindle";
@@ -110,8 +104,8 @@
       plugin = {
         hyprexpo = {
           columns = 3;
-          gap_size = 5;
-          bg_col = "rgba(44475ADD)";
+          gap_size = 0;
+#          bg_col = "rgb(#282936)";
           workspace_method = "first 1";
         };
       };

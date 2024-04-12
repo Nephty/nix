@@ -1,4 +1,4 @@
-{
+{ config, ... }: {
   services.dunst = {
     enable = true;
     settings = {
@@ -17,7 +17,7 @@
         text_icon_padding = 0;
         frame_width = 2;
 
-        frame_color = "#ffffff";
+        frame_color = "#${config.colorScheme.palette.base06}";
         separator_color = "frame";
 
         sort = true;
@@ -54,19 +54,19 @@
 
       urgency_low = {
         background = "#22242DCC";
-        foreground = "#FFFFFF";
+        foreground = "#${config.colorScheme.palette.base05}";
         timeout = 5;
       };
 
       urgency_normal = {
         background = "#22242DCC";
-        foreground = "#FFFFFF";
+        foreground = "#${config.colorScheme.palette.base05}";
         timeout = 5;
       };
 
       urgency_critical = {
         background = "#1E1E2E";
-        foreground = "#FFFFFF";
+        foreground = "#${config.colorScheme.palette.base05}";
         frame_color = "#FAB387";
         timeout = 10;
       };

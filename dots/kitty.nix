@@ -11,10 +11,13 @@
       name = "JetBrainsMono Nerd Font";
     };
     settings = {
-      foreground = "#DADBEA";
-      background = "#22242D";
+#      foreground = "#DADBEA";
+      foreground = "#${config.colorScheme.palette.base06}";
+#      background = "#22242D";
+      background = "#${config.colorScheme.palette.base00}";
       background_opacity = "0.3";
-      cursor = "#7F7F7F";
+      cursor = "#${config.colorScheme.palette.base04}";
+      # I think I don't need this since I use beam cursor shape
       cursor_text_color = "#4C0100";
       cursor_shape = "beam";
       cursor_beam_thickness = "2.75";

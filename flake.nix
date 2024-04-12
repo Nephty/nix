@@ -26,9 +26,11 @@
 
     hyprpicker.url = "github:hyprwm/hyprpicker";
     hyprpicker.inputs.nixpkgs.follows = "nixpkgs";
+
+    nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, home-manager, nixpkgs, hyprland, hyprland-plugins, hyprpaper, hyprlock, hypridle, hyprpicker }@inputs:
+  outputs = { self, home-manager, nixpkgs, hyprland, hyprland-plugins, hyprpaper, hyprlock, hypridle, hyprpicker, nix-colors }@inputs:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {

@@ -8,6 +8,7 @@
   nixpkgs.config.allowUnfree = true;
 
   imports = [
+    inputs.nix-colors.homeManagerModules.default
     ./dots/kitty.nix
     ./dots/btop.nix
     ./dots/dunst.nix
@@ -21,6 +22,9 @@
     ./dots/hyprpicker.nix
     ./dots/keybinds.nix
   ];
+
+  colorScheme = inputs.nix-colors.colorSchemes.harmonic16-dark;
+#  colorScheme = inputs.nix-colors.colorSchemes.da-one-ocean;
 
   home.sessionVariables = {
     # EDITOR = "vim";

@@ -1,7 +1,7 @@
-{
+{ config, inputs, ... }: {
   wayland.windowManager.hyprland = {
     settings = {
-      bind = [ "$mainMod, D, exec, wofi" ];
+      bindr = [ "$mainMod, D, exec, wofi" ];
     };
   };
 
@@ -37,15 +37,15 @@
       #window {
         margin: 0px;
         border: 2px solid;
-        border-color: #22242D;
+        border-color: #${config.colorScheme.palette.base00};
         border-radius: 12px;
-        background-color: #22242D;
+        background-color: #${config.colorScheme.palette.base00};
       }
 
       #input {
         margin: 16px;
-        background-color: #22242D;
-        color: #7F7F7F;
+        background-color: #${config.colorScheme.palette.base00};
+        color: #${config.colorScheme.palette.base04};
         border-radius: 25px;
         border: transparent;
       }
@@ -60,7 +60,7 @@
       }
 
       #entry:selected {
-        background-color: #7F7F7F;
+        background-color: #${config.colorScheme.palette.base04};
         border-radius: 8px;
       }
 
