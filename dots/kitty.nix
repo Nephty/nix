@@ -28,6 +28,8 @@
 
       foreground = "#${base07}";
       background = "#${base00}";
+      selection_foreground = "#${base00}";
+      selection_background = "#${base06}";
       color0     = "#${base00}";
       color1     = "#${base0F}";
       color2     = "#${base0B}";
