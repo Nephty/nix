@@ -95,6 +95,7 @@
               default = ["" "" ""];
           };
           on-click = "pavucontrol";
+          on-click-right = "bluetoothctl connect 04:21:44:28:E1:0F";
         };
 
 	    "custom/ping" = {
