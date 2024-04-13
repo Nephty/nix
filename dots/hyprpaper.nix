@@ -6,10 +6,10 @@
   services.hyprpaper = {
     enable = true;
     wallpapers = [
-      "eDP-1,~/Nix/background.jpg"
+      "eDP-1,~/nix/background.jpg"
     ];
     preloads = [
-      "~/Nix/background.jpg"
+      "~/nix/background.jpg"
     ];
   };
 }

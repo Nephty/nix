@@ -22,6 +22,10 @@
         "xset -b"
       ];
 
+      env = [
+        "WLR_NO_HARDWARE_CURSORS,1"
+      ];
+
       input = {
         kb_layout = "be";
 
@@ -40,7 +44,7 @@
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
-        "col.active_border" = "rgb(#${config.colorScheme.palette.base06}) rgb(#${config.colorScheme.palette.base00}) 45deg";
+        "col.active_border" = "rgb(#${config.colorScheme.palette.base07}) rgb(#${config.colorScheme.palette.base00}) 45deg";
         "col.inactive_border" = "rgba(00000000)";
 
         layout = "dwindle";

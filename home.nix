@@ -23,7 +23,7 @@
     ./dots/keybinds.nix
   ];
 
-  colorScheme = inputs.nix-colors.colorSchemes.harmonic16-dark;
+  colorScheme = inputs.nix-colors.colorSchemes.onedark;
 #  colorScheme = inputs.nix-colors.colorSchemes.da-one-ocean;
 
   home.sessionVariables = {

@@ -10,13 +10,10 @@
     font = {
       name = "JetBrainsMono Nerd Font";
     };
-    settings = {
+    settings = with config.colorScheme.palette; {
 #      foreground = "#DADBEA";
-      foreground = "#${config.colorScheme.palette.base06}";
 #      background = "#22242D";
-      background = "#${config.colorScheme.palette.base00}";
       background_opacity = "0.3";
-      cursor = "#${config.colorScheme.palette.base04}";
       # I think I don't need this since I use beam cursor shape
       cursor_text_color = "#4C0100";
       cursor_shape = "beam";
@@ -27,6 +24,26 @@
       copy_on_select = "no";
       editor = "pluma";
       resize_draw_strategy = "scale";
+
+
+      foreground = "#${base07}";
+      background = "#${base00}";
+      color0     = "#${base00}";
+      color1     = "#${base0F}";
+      color2     = "#${base0B}";
+      color3     = "#${base0A}";
+      color4     = "#${base0D}";
+      color5     = "#${base0E}";
+      color6     = "#${base0C}";
+      color7     = "#${base07}";
+      color8     = "#${base05}";
+      color9     = "#${base08}";
+      color10    = "#${base0B}";
+      color11    = "#${base0A}";
+      color12    = "#${base0D}";
+      color13    = "#${base0E}";
+      color14    = "#${base0C}";
+      color15    = "#${base07}";
     };
   };
 }
