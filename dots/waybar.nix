@@ -175,14 +175,8 @@
           background: rgba(0, 0, 0, 0.2);
       }
 
-/*
       #workspaces button.active {
-          box-shadow: inset 1px 0 1px #${config.colorScheme.palette.base07}, inset -1px 0 1px #${config.colorScheme.palette.base00};
-      }
-*/
-
-      #workspaces button.active {
-          background: linear-gradient(to right, #${config.colorScheme.palette.base03} 0%, #${config.colorScheme.palette.base00} 30%);
+          background: linear-gradient(to right, #${config.colorScheme.palette.base04} 0%, #${config.colorScheme.palette.base00} 30%);
       }
 
       #workspaces button.urgent {
