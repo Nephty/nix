@@ -181,8 +181,7 @@
       }
 
       #workspaces button.urgent {
-          background-color: #${config.colorScheme.palette.base07};
-      }
+          background: linear-gradient(to right, #${config.colorScheme.palette.base08} 0%, #${config.colorScheme.palette.base00} 30%);
 
       #mode {
           background-color: #64727D;
